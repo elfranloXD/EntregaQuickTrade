@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle del producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card >
+    <ion-card-header>
+      <ion-card-title>{{res.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>Descripción: {{res.descripcion}}</ion-label>
+      <ion-label *ngIf = "res.precio != null"><br>Precio: {{res.precio}}</ion-label>
+      <ion-label *ngIf = "res.estado != null"><br>Estado: {{res.estado}}</ion-label>
+      <ion-label *ngIf = "res.localidad != null"><br>Localidad: {{res.localidad}}</ion-label>
+      <ion-label *ngIf = "res.metros != null"><br>Metros: {{res.metros}}</ion-label>
+      <ion-label *ngIf = "res.habitaciones != null"><br>Habitaciones: {{res.habitaciones}}</ion-label>
+      <ion-label *ngIf = "res.banyos != null"><br>Baños: {{res.banyos}}</ion-label>
+      <ion-label *ngIf = "res.km != null"><br>Km: {{res.km}}</ion-label>
+      <ion-label *ngIf = "res.anyo != null"><br>Año: {{res.anyo}}</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button routerLink="/home" routerDirection="forward">Volver</ion-button>
+
+</ion-content>

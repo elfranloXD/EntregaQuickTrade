@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Selecciona una opción
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button [routerLink]="['/mis-productos', id]" routerDirection="forward">Mis productos</ion-button>
+    <br>
+
+    <ion-button [routerLink]="['/insertar', id]" routerDirection="forward">Insertar productos</ion-button>
+    <br>
+
+    <ion-button (click)="cambiarOculto()">Lista de productos</ion-button>
+
+
+    
+    
+    <div *ngIf = "!oculto"> 
+      <ion-card *ngFor="let item of producto">
+        <ion-card-header>
+          <ion-card-title>{{item.nombre}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-label>Descripción: {{item.descripcion}}</ion-label>
+        </ion-card-content>
+
+        
+        <ion-button [routerLink]="['/mas-detalles/',item.key]" routerDirection="forward" >
+          Más detalles</ion-button>  
+      </ion-card>
+    </div>
+</ion-content>
+
+
+<ion-footer style="margin-top: 10px;">
+  <ion-toolbar>
+    <ion-button expand="block" routerLink="/login" routerDirection="forward">Volver</ion-button>
+  </ion-toolbar>
+</ion-footer>
