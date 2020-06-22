@@ -4,7 +4,8 @@ export interface IProductoHog{
     "descripcion": string,
     "precio": number,
     "claveUsuario": string,
-    "categoria": string
+    "categoria": string,
+    "vendido": string
 }
 
 export interface IProductoTec extends IProductoHog{ 

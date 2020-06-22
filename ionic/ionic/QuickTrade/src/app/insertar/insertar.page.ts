@@ -45,7 +45,8 @@ export class InsertarPage implements OnInit {
   habitaciones: number = 0;
   banyos: number = 0;
   claveUsuario: string = "";
-  categoria: string;
+    categoria: string;
+    vendido: string;
 
 
   
@@ -89,8 +90,9 @@ actualizarClave(clave: string){
                                       "descripcion": this.descripcion,
                                       "estado": this.estado,
                                       "precio": this.precio,
-                                      "claveUsuario": this._activatedRoute.snapshot.paramMap.get("id"),
-                                      "categoria": this.categoria                
+          "claveUsuario": this._activatedRoute.snapshot.paramMap.get("id"),
+          "categoria": this.categoria,
+          "vendido": this.vendido,
                                     };
 
      
@@ -109,7 +111,8 @@ actualizarClave(clave: string){
                                       "descripcion": this.descripcion,
                                       "precio": this.precio,
                                       "claveUsuario": this._activatedRoute.snapshot.paramMap.get("id"),
-                                      "categoria": this.categoria
+          "categoria": this.categoria,
+                                      "vendido": this.vendido
                                     };
 
       
@@ -132,7 +135,8 @@ actualizarClave(clave: string){
                                       "banyos": this.banyos,
                                       "precio": this.precio,
                                       "claveUsuario": this._activatedRoute.snapshot.paramMap.get("id"),
-                                      "categoria": this.categoria
+          "categoria": this.categoria,
+          "vendido": this.vendido
                                   };
      
       let clave: string = this._listaProductos.setProducto(productoInm);
@@ -153,7 +157,8 @@ actualizarClave(clave: string){
                                       "anyo": this.anyo,
                                       "precio": this.precio,
                                       "claveUsuario": this._activatedRoute.snapshot.paramMap.get("id"),
-                                      "categoria": this.categoria
+          "categoria": this.categoria,
+                                      "vendido": this.vendido
                                   };
       
       let clave: string = this._listaProductos.setProducto(productoMot);

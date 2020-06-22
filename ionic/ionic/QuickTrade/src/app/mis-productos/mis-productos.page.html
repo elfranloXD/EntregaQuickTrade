@@ -24,7 +24,8 @@
         </ion-card-header>
 
         <ion-card-content>
-          <ion-label>Descripción: {{item.descripcion}}</ion-label>
+            <ion-label>Descripción: {{item.descripcion}}</ion-label>
+            <ion-label>{{item.vendido}}</ion-label>
         </ion-card-content>
         
         <ion-button color="primary" (click)="eliminarProducto(item.id)">Eliminar producto</ion-button> 

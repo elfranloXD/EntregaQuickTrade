@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Precio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>Precio</ion-label>
+        <ion-input type="number" [(ngModel)]="precio"></ion-input>
+
+        <div *ngFor="let item of producto"> </div>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>{{item.nombre}}</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+                <ion-label>Descripción: {{item.descripcion}}</ion-label>
+                <ion-label>{{item.vendido}}</ion-label>
+            </ion-card-content>
+          </ion-card>
+</ion-content>
